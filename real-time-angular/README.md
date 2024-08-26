@@ -2,26 +2,44 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.11.
 
-## Development server
+## Development Server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+To start the development server, run the following command in your terminal:
 
-## Code scaffolding
+```bash
+ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Then, navigate to `http://localhost:4200/` in your web browser. The application will automatically reload if you make any changes to the source files.
 
-## Build
+## Updating `environment.ts`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To integrate with the backend, you need to update the `environment.ts` file with the relevant backend port number. Here's how:
 
-## Running unit tests
+1. Navigate to the `src/environments/` folder.
+2. Open the `environment.ts` file.
+3. Update the API endpoint or backend URL with the correct port number.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+For example:
 
-## Running end-to-end tests
+```typescript
+export const environment = {
+  hubUrl: 'https://localhost:7138/chatHub'  // Update this with your backend URL and port
+};
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Running the Project
 
-## Further help
+After updating the `environment.ts` file, run the project using `ng serve` as described above.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Note:** To see real-time broadcasting in action, open multiple tabs in your browser and navigate to `http://localhost:4200/` in each tab. This will allow you to observe how messages are broadcast to all connected clients.
+
+## Additional Recommendations
+
+- **Installing Dependencies:** Make sure you have installed all the necessary dependencies by running:
+
+  ```bash
+  npm install
+  ```
+
+- **Further Reading:** For more details on using SignalR with Angular, check out the [official documentation](https://docs.microsoft.com/en-us/aspnet/core/signalr/javascript-client?view=aspnetcore-5.0).
