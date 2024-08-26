@@ -1,0 +1,6 @@
+@real_tme_.net_HostAddress = http://localhost:5082
+
+GET {{real_tme_.net_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
