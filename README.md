@@ -1,5 +1,3 @@
-Here's an improved version of your `README.md` for your GitHub repository:
-
 ---
 
 # Real-Time Broadcast Communication with Angular and .NET using SignalR
